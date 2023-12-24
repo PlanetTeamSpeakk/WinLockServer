@@ -23,3 +23,17 @@ In order to run, please ensure you've done the following:
   The reasons as to why these steps are necessary are because of Windows being very strict with security regarding networking.  
   Not running the netsh command would require the application to always be started as admin,
   not allowing incoming traffic for the port would mean that the server can only be accessed locally and no other device can access it.
+
+### Start on Windows startup
+For my use case, this server is required to always be running. This can be achieved as follows:
+- Search for 'Task Scheduler'.
+- Click 'Create Task...'
+- Fill in some name for the task.
+- Go to the 'Triggers' tab and click 'New...'
+- From the dropdown at the top of the window, select 'At log on'.
+- Optionally click 'Specific user'.
+- Click 'OK' to add the trigger.
+- Go to the 'Actions' tab and click 'New...'
+- Click 'Browse...' and browse to the EXE.
+- Click 'OK'.
+- Click 'OK' again.
